@@ -1,0 +1,25 @@
+WEBVTT - PauseAI Educational Transcript
+
+00:00:00.000 --> 00:01:00.000
+Welcome to Machine Learning Fundamentals. In this lecture, we explore neural network architectures, optimization dynamics, and modern training paradigms.
+
+00:01:00.000 --> 00:02:15.000
+An artificial neuron models basic decision boundaries. It computes an affine transformation: z equals the dot product of weights W and input vector X plus bias b.
+
+00:02:15.000 --> 00:03:30.000
+To evaluate how accurately our neural network predicts targets, we define an objective loss function. Mean Squared Error measures quadratic distance for regression, while Cross-Entropy evaluates probability distributions in classification.
+
+00:03:30.000 --> 00:04:45.000
+Gradient Descent is our primary optimization engine. By computing the gradient vector of the loss with respect to parameters, we update weights in the direction of steepest descent scaled by our learning rate eta.
+
+00:04:45.000 --> 00:06:00.000
+Activation functions introduce non-linearity. Without non-linearities, any deep stack of linear layers collapses mathematically into a single linear matrix multiplication. The Sigmoid function compresses values between 0 and 1, but saturates. ReLU outputs max of 0 and x, overcoming vanishing gradients.
+
+00:06:00.000 --> 00:07:30.000
+Now let us tackle Backpropagation. Backpropagation is the foundational algorithm that enables multi-layer neural network training through recursive application of the calculus chain rule.
+
+00:07:30.000 --> 00:09:00.000
+During the backward pass of backpropagation, the error gradient flows in reverse from the output layer back toward earlier hidden layers, computing partial derivatives dL over dW efficiently.
+
+00:09:00.000 --> 00:10:30.000
+When neural networks have high capacity, they risk overfitting to training noise. We mitigate overfitting through regularization strategies like L2 weight decay and Dropout, which randomly disables neurons during forward passes.

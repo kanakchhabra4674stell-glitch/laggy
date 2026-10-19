@@ -1,0 +1,21 @@
+ALEX RIVERA
+Machine Learning Engineer | M.S. Computer Science
+Email: alex.rivera@example.com | Portfolio: github.com/alexrivera-ml
+
+PROFESSIONAL SUMMARY
+Senior ML Engineer with 4+ years of experience designing and deploying scalable deep learning pipelines, RAG systems, and distributed model inference engines. Proficient in PyTorch, Python, FastAPI, and Kubernetes.
+
+TECHNICAL SKILLS
+• Languages: Python, C++, TypeScript, SQL
+• Frameworks: PyTorch, Hugging Face Transformers, FastAPI, Next.js, Ray, FAISS
+• Core Domains: Retrieval-Augmented Generation (RAG), Vector Databases, Model Quantization, CI/CD, Docker
+
+EXPERIENCE
+Machine Learning Engineer | Apex AI Systems (2022 - Present)
+• Built hybrid BM25 + dense vector search pipeline reducing retrieval latency by 38% across 10M documents.
+• Spearheaded fine-tuning and evaluation pipelines for open-source LLMs using LoRA/PEFT.
+• Deployed real-time inference microservices with FastAPI and Triton Inference Server maintaining 99.9% uptime.
+
+PROJECTS
+• PauseAI Concept Retrieval: Created timestamp-gated RAG system preventing future lecture spoilers.
+• Distributed Gradient Descent Profiler: Built memory profiling tool analyzing backpropagation bottlenecks.
