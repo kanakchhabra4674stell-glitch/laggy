@@ -1,4 +1,4 @@
-const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+const API_BASE = process.env.NEXT_PUBLIC_API_URL || "";
 
 export async function fetchHealth() {
   const res = await fetch(`${API_BASE}/api/health`, { cache: "no-store" });
@@ -44,7 +44,10 @@ export async function askQuestion(params: {
 }
 
 export async function fetchChatHistory(courseId: string, lessonId?: string, sessionId?: string) {
-  const url = new URL(`${API_BASE}/api/ask/history`);
+  const url = new URL(
+  `${API_BASE}/api/ask/history`,
+  typeof window !== "undefined" ? window.location.origin : "http://localhost"
+);
   url.searchParams.set("course_id", courseId);
   if (lessonId) url.searchParams.set("lesson_id", lessonId);
   if (sessionId) url.searchParams.set("session_id", sessionId);
@@ -145,7 +148,10 @@ export async function uploadResource(formData: FormData) {
 }
 
 export async function fetchResources(courseId?: string) {
-  const url = new URL(`${API_BASE}/api/resources`);
+  const url = new URL(
+    `${API_BASE}/api/resources`,
+    typeof window !== "undefined" ? window.location.origin : "http://localhost"
+  );
   if (courseId) url.searchParams.set("course_id", courseId);
   const res = await fetch(url.toString(), { cache: "no-store" });
   if (!res.ok) throw new Error("Failed to fetch resources");
