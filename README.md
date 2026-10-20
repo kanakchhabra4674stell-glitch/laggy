@@ -271,5 +271,6 @@ Run the full verification suite anytime using pytest:
 
 * **Abhijeet Saini** — *System Architect & Full Stack Engineer*
 * **Kanak Chhabra** — *AI/ML Engineer & Backend Architect*
+* **Rashi Singh** — *Research*
 
 **BuildVerse 2026 Hackathon** • *Built with ❤️ for learners worldwide.*
