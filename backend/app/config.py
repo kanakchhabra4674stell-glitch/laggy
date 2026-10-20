@@ -1,3 +1,4 @@
+
 import os
 from pydantic_settings import BaseSettings
 from typing import List
@@ -17,12 +18,16 @@ class Settings(BaseSettings):
     DEVICE: str = "cpu"
 
     # Directories
-    DATA_DIR: str = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../data"))
-    UPLOAD_DIR: str = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../data/uploads"))
+    DATA_DIR: str = "/tmp/pauseai_data"
+    UPLOAD_DIR: str = "/tmp/pauseai_data/uploads"
 
     @property
     def cors_origin_list(self) -> List[str]:
-        return [origin.strip() for origin in self.CORS_ORIGINS.split(",") if origin.strip()]
+        return [
+            origin.strip()
+            for origin in self.CORS_ORIGINS.split(",")
+            if origin.strip()
+        ]
 
     class Config:
         env_file = ".env"
